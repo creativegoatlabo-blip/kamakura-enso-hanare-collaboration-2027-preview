@@ -10,9 +10,9 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;1,400&family=Noto+Sans+JP:wght@400;500&family=Noto+Serif+JP:wght@300;400;500&display=swap" rel="stylesheet" />
-    <link rel="preload" as="image" href="assets/kamakura-video-cover-instagram.jpg" />
+    <link rel="preload" as="image" href="assets/kamakura-rings-instagram.jpg" />
     <link rel="preload" as="image" href="assets/enso-hanare-instagram-web.jpg" />
-    <link rel="stylesheet" href="styles.css?v=20260924a" />
+    <link rel="stylesheet" href="styles.css?v=20260924b" />
   </head>
   <body>
     <a class="skip-link" href="#content">本文へ移動</a>
@@ -25,12 +25,12 @@
 
     <main id="content">
       <section class="first-frame" aria-labelledby="hero-title">
-        <div class="hero-photos" aria-label="鎌倉彫金工房の動画とenso hanareの写真">
-          <figure class="hero-photo hero-photo-video">
-            <div class="instagram-video-stage">
-              <iframe src="https://www.instagram.com/p/DdD5RoIRUm0/embed/" title="鎌倉彫金工房の動画『モーニングルーティン』" loading="eager" allow="autoplay; encrypted-media; picture-in-picture" referrerpolicy="strict-origin-when-cross-origin"></iframe>
-            </div>
-            <figcaption><a href="https://www.instagram.com/p/DdD5RoIRUm0/" target="_blank" rel="noopener noreferrer" aria-label="鎌倉彫金工房の動画の元投稿を開く">鎌倉彫金工房 <span>Instagram ↗</span></a></figcaption>
+        <div class="hero-photos" aria-label="鎌倉彫金工房とenso hanareの写真">
+          <figure class="hero-photo hero-photo-rings">
+            <a href="https://www.instagram.com/kamakura_chokin/p/DdTVsb1GgyL/" target="_blank" rel="noopener noreferrer" aria-label="鎌倉彫金工房の写真の元投稿を開く">
+              <img src="assets/kamakura-rings-instagram.jpg" alt="木の上に置かれたシルバーとゴールドの手づくり指輪" width="4096" height="4096" fetchpriority="high" decoding="async" />
+            </a>
+            <figcaption>鎌倉彫金工房 <span>Instagram</span></figcaption>
           </figure>
           <figure class="hero-photo hero-photo-enso">
             <a href="https://www.instagram.com/enso_hanare/p/DdVPFkDokkN/" target="_blank" rel="noopener noreferrer" aria-label="enso hanareの写真の元投稿を開く">
@@ -95,17 +95,5 @@
     </main>
 
     <footer class="site-footer"><span>鎌倉彫金工房 × enso hanare</span><span>鎌倉で過ごす、ひとつの一日。</span></footer>
-    <script>
-      const videoStage = document.querySelector('.instagram-video-stage');
-      const embeddedVideo = videoStage.querySelector('iframe');
-      const fitEmbeddedVideo = () => {
-        const { width, height } = videoStage.getBoundingClientRect();
-        const frameWidth = Math.ceil(Math.max(width / 0.703, height / 1.25, 320));
-        embeddedVideo.style.width = `${frameWidth}px`;
-        embeddedVideo.style.height = `${Math.ceil(frameWidth * 1.25 + 54)}px`;
-      };
-      new ResizeObserver(fitEmbeddedVideo).observe(videoStage);
-      fitEmbeddedVideo();
-    </script>
   </body>
 </html>

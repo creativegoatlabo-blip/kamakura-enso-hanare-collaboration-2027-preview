@@ -28,14 +28,10 @@ a[aria-disabled="true"] { opacity: .5; cursor: not-allowed; pointer-events: none
 .hero-photo a { display: block; width: 100%; height: 100%; }
 .hero-photo img { object-fit: cover; transition: transform 900ms var(--ease-out); }
 .hero-photo a:hover img { transform: scale(1.028); }
-.hero-photo-video { background: #292723 url("assets/kamakura-video-cover-instagram.jpg") center / cover no-repeat; }
-.instagram-video-stage { position: absolute; inset: 0; overflow: hidden; }
-.instagram-video-stage iframe { position: absolute; top: calc(50% - 27px); left: 50%; width: 100%; height: 100%; border: 0; transform: translate(-50%, -50%); }
+.hero-photo-rings img { object-position: center 62%; }
 .hero-photo-enso img { object-position: center 52%; }
 .hero-photo figcaption { position: absolute; bottom: var(--space-md); left: clamp(1.3rem, 3.6vw, 4.5rem); z-index: 1; pointer-events: none; font-size: var(--text-xs); letter-spacing: .09em; }
-.hero-photo-video figcaption { z-index: 2; color: #fff; text-shadow: 0 1px 12px rgb(0 0 0 / .7); pointer-events: auto; }
-.hero-photo-video figcaption a { width: auto; height: auto; text-decoration: none; }
-.hero-photo-video figcaption a:hover { text-decoration: underline; text-underline-offset: .3em; }
+.hero-photo-rings figcaption { color: var(--color-night-ink); text-shadow: 0 1px 10px rgb(0 0 0 / .55); }
 .hero-photo-enso figcaption { color: var(--color-night-ink); }
 .hero-photo figcaption span { font-family: var(--font-display); font-size: 1.25em; font-style: italic; letter-spacing: 0; }
 .hero-copy { padding: clamp(2rem, 3vw, 3.25rem) clamp(1.3rem, 3.6vw, 4.5rem) clamp(2.2rem, 3.5vw, 3.8rem); display: grid; grid-template-columns: minmax(0, 1.15fr) minmax(17rem, .45fr); align-items: end; gap: var(--space-2xl); }
@@ -86,7 +82,7 @@ h2 { font-size: var(--text-section); line-height: 1.55; letter-spacing: .12em; }
   .first-frame { height: auto; min-height: calc(100svh - 4.5rem); grid-template-rows: minmax(19rem, 48svh) auto; }
   .hero-photos { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: var(--space-xs); }
   .hero-photo figcaption { left: var(--space-sm); bottom: var(--space-sm); font-size: .65rem; letter-spacing: 0; }
-  .hero-photo-video::after { content: ""; position: absolute; z-index: 1; right: 0; bottom: 0; left: 0; height: 2.5rem; background: #292723; pointer-events: none; }
+  .hero-photo-rings img { object-position: 70% 62%; }
   .hero-photo-enso figcaption { left: var(--space-sm); }
   .hero-copy { display: block; padding-top: var(--space-xl); padding-bottom: var(--space-2xl); }
   .edition { font-size: .98rem; margin-bottom: var(--space-sm); }
