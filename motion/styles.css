@@ -37,6 +37,7 @@ a:focus-visible { outline: 2px solid currentColor; outline-offset: 5px; }
 .header-enso { justify-content: flex-end; background: var(--ink); color: var(--ivory); }
 .header-cross { position: absolute; z-index: 1; top: 50%; left: 50%; width: 2rem; height: 2rem; display: grid; place-items: center; transform: translate(-50%, -50%); border-radius: 50%; background: var(--ivory); color: var(--ink); font-family: var(--font-latin); font-size: 1rem; line-height: 1; }
 
+.opening-track { position: relative; }
 .opening { position: relative; height: max(680px, calc(100svh - 68px)); overflow: hidden; }
 .opening-photos { position: absolute; inset: 0; display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); }
 .opening-photo { position: relative; min-width: 0; overflow: hidden; }
@@ -93,9 +94,13 @@ a:focus-visible { outline: 2px solid currentColor; outline-offset: 5px; }
 }
 @media (max-width: 760px) {
   .site-header { height: 60px; }
+  .motion-enabled .site-header { position: sticky; top: 0; z-index: 30; }
   .header-brand { padding: 0 1rem; font-size: .7rem; letter-spacing: .02em; }
   .header-cross { width: 1.5rem; height: 1.5rem; font-size: .85rem; }
-  .opening { height: max(680px, calc(100svh - 60px)); }
+  .opening { height: max(620px, calc(100svh - 60px)); }
+  .motion-enabled .opening-track { height: calc(200svh - 60px); min-height: calc(620px + 100svh); }
+  .motion-enabled .opening { position: sticky; top: 60px; }
+  .motion-enabled .opening-photo img { position: absolute; top: 0; left: 0; width: auto; max-width: none; height: 100%; object-fit: fill; transform: translate3d(var(--pan-x, 0px), 0, 0); }
   .opening-copy { padding-top: clamp(4rem, 11vh, 6rem); }
   .opening-date { margin-bottom: 2rem; padding: .4rem .7rem; font-size: .67rem; }
   .opening-title { font-size: clamp(2.3rem, 9.7vw, 4.5rem); }
@@ -130,5 +135,5 @@ a:focus-visible { outline: 2px solid currentColor; outline-offset: 5px; }
   html { scroll-behavior: auto; }
   .js .intro-loader { display: none; }
   .js .title-word, .motion-enabled .journey h2 { transform: none; transition: none; }
-  .opening-photo img { transform: none; will-change: auto; }
+  .opening-photo img, .motion-enabled .opening-photo img { transform: none; will-change: auto; }
 }
